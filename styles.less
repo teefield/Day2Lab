@@ -1,2 +1,110 @@
-@primaryColor: #383939;
-@secondaryColor: #66bbe3;
+@myblue-color: #ADD8E6;
+@mygrey-color: #D3D3D3;
+@mysubhead-font-size: 16px;
+@navbar-height: 10px;
+@navbar-margin-bottom: 10px;
+
+
+.nav {
+  position: relative;
+  min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  margin-bottom: @navbar-margin-bottom;
+  border: 1px solid transparent;
+  background-color: @myblue-color;
+  text-align: center;
+}
+
+.header li {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.header a:hover {
+	color: @mygrey-color;
+}
+
+.name {
+	display: block;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.name h3 {
+	margin-top: -20px;
+}
+
+.resume h1 {
+	text-align: center;
+	border-top: 3px solid @mygrey-color;
+	border-bottom: 2px solid @myblue-color;
+}
+
+.resume h5 {
+	margin-left: 15px;
+	margin-bottom: -10px;
+	font-size: @mysubhead-font-size;
+}
+
+.resume h6 {
+	margin-left: 20px;
+	margin-top: 15px;
+	margin-bottom: -10px;
+	color: @myblue-color;
+	font-size: @mysubhead-font-size;
+	font-style: italic;
+}
+
+p {
+	margin-left: 35px;
+	margin-right: 45px;
+	font-size: 13px;
+}
+
+.contact {
+	background-color: @myblue-color;
+	height: 490px;
+	margin-left: 100px;
+	margin-right: 100px;
+	text-align: left;
+	border-radius: 5px;
+}
+
+.contact form {
+	margin-left: 200px;
+	position: relative;
+	padding-top: 30px;
+	font-size: @mysubhead-font-size;
+	color: white;
+	text-transform: uppercase; 
+	padding-top: -10px;
+}
+
+.footer {
+	margin-top: 50px;
+	border-top: 2px solid @myblue-color;
+	text-align: center;
+}
+
+.footer li {
+	display: inline-block;
+	padding-left: 25px;
+	padding-right: 15px;
+	color: @myblue-color;
+	list-style: none;
+}
+
+.footer a {
+	color: @myblue-color;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	color: @mygrey-color;
+	text-decoration: none;
+}
