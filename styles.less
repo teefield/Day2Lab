@@ -4,6 +4,15 @@
 @navbar-height: 10px;
 @navbar-margin-bottom: 10px;
 
+.navmixin (@a) when (lightness(@a) >= 50%) {
+  background-color: black;
+}
+.navmixin (@a) when (lightness(@a) < 50%) {
+  background-color: white;
+}
+.navmixin (@a) {
+  color: @a;
+}
 
 .nav {
   position: relative;
@@ -12,6 +21,7 @@
   border: 1px solid transparent;
   background-color: @myblue-color;
   text-align: center;
+  
 }
 
 .header {
@@ -23,6 +33,7 @@
   a {
   text-decoration: none;
   color: white;
+  .navmixin(white);
 }
   a:hover {
 	color: @mygrey-color;
@@ -66,13 +77,19 @@ p {
 	font-size: 13px;
 }
 
+.border-radius(@radius: 5px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
 .contact {
 	background-color: @myblue-color;
 	height: 490px;
 	margin-left: 100px;
 	margin-right: 100px;
 	text-align: left;
-	border-radius: 5px;
+	.border-radius;
 }
 
 .contact form {
@@ -102,6 +119,7 @@ p {
 }
   a:hover {
 	color: @mygrey-color;
+  background-color: darken(@myblue-color, 40%);
 	text-decoration: none;
 }
 }

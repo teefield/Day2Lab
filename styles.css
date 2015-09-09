@@ -13,6 +13,7 @@
 }
 .header a {
   text-decoration: none;
+  background-color: black;
   color: white;
 }
 .header a:hover {
@@ -55,6 +56,8 @@ p {
   margin-left: 100px;
   margin-right: 100px;
   text-align: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
 }
 .contact form {
@@ -84,5 +87,6 @@ p {
 }
 .footer a:hover {
   color: #d3d3d3;
+  background-color: #2e7e99;
   text-decoration: none;
 }
